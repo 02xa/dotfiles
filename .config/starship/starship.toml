@@ -38,12 +38,6 @@ symbol = " "
 [fossil_branch]
 symbol = " "
 
-# Gcloud entry
-[gcloud]
-format = "on [$symbol$domain]($style) "
-symbol = "☁️ "
-style = "bold blue"
-
 # Directory entry
 [directory]
 read_only = " 󰌾 "
