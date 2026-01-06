@@ -107,7 +107,7 @@ window#waybar.hidden {
 #workspaces {
   background-color: alpha(@base, 0.9);
   border: 2px solid @border;
-  padding: 0 10px;
+  padding: 0px;
   margin: 2px 4px 5px 4px;
   box-shadow: 3px 3px 1px 1px alpha(@shadow, 0.7);
   border-radius: 10px;
@@ -355,13 +355,13 @@ window#waybar.hidden {
 }
 
 /* Animation Keyframes */
-@keyframes blink {
-  to {
-    background-color: alpha(@base, 0.9);
-    color: @red;
-  }
-}
-
+/* @keyframes blink { */
+/*   to { */
+/*     background-color: alpha(@base, 0.9); */
+/*     color: @red; */
+/*   } */
+/* } */
+/**/
 /* @keyframes gradient { */
 /*   0% { */
 /*     background-position: 0% 50%; */
