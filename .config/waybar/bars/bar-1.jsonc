@@ -10,8 +10,8 @@
     "~/.config/waybar/modules/pulseaudio.jsonc",
     "~/.config/waybar/modules/hyprland-language.jsonc",
   ],
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["clock#cl1"],
+  "modules-left": ["clock#cl1", "hyprland/window"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "custom/updates",
     "hyprland/language",
