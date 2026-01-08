@@ -107,7 +107,7 @@ window#waybar.hidden {
 #workspaces {
   background-color: alpha(@base, 0.9);
   border: 2px solid @border;
-  padding: 0px;
+  padding: 0 10px;
   margin: 2px 4px 5px 4px;
   box-shadow: 3px 3px 1px 1px alpha(@shadow, 0.7);
   border-radius: 10px;
@@ -349,7 +349,6 @@ window#waybar.hidden {
   animation: gradient 15s ease infinite;
   text-shadow: 0px 0px 5px @border;
   font-weight: bold;
-  color: @mantle;
   transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
   border: none;
 }
