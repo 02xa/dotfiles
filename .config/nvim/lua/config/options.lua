@@ -6,8 +6,12 @@ vim.loader.enable()
 
 -- Personal Config and LazyVim global options
 go.lualine_info_extras = false
+go.snacks_animate = true
 go.codeium_cmp_hide = false
 go.lazygit_config = false
+go.lazyvim_cmp = "blink"
+go.lazyvim_picker = "snacks"
+go.trouble_lualine = false
 
 -- Define leader key
 go.mapleader = " "
@@ -36,6 +40,12 @@ o.showcmd = false
 o.laststatus = 3
 o.cmdheight = 0
 
+-- Disable mouse
+-- o.mouse = ""
+
+-- Disable native bufferline
+o.showtabline = 0
+
 -- Enable spell checking
 o.spell = true
 o.spelllang:append("es")
@@ -45,8 +55,11 @@ o.backspace = { "start", "eol", "indent" }
 o.breakindent = true
 
 -- Smoothscroll
-if vim.fn.has("nvim-0.10") == 1 then
-  o.smoothscroll = true
-end
+o.smoothscroll = true
 
 o.conceallevel = 2
+
+-- Fix the clipboard when using WSL. Install https://github.com/equalsraf/win32yank (https://github.com/microsoft/WSL/issues/4440#issuecomment-1212350183)
+if os.getenv("WSL_DISTRO_NAME") ~= nil then
+  o.clipboard = "unnamedplus"
+end

@@ -1,44 +1,28 @@
+local filetype = { "markdown", "text", "tex", "plaintex", "norg" }
+
 return {
   { import = "lazyvim.plugins.extras.lang.markdown" },
   {
-    "gaoDean/autolist.nvim",
-    ft = {
-      "markdown",
-      "text",
-      "tex",
-      "plaintex",
-      "norg",
-    },
-    opts = {},
-    keys = {
-      { "<tab>", "<cmd>AutolistTab<cr>", mode = { "i" } },
-      { "<s-tab>", "<cmd>AutolistShiftTab<cr>", mode = { "i" } },
-      { "<CR>", "<CR><cmd>AutolistNewBullet<cr>", mode = { "i" } },
-      { "o", "o<cmd>AutolistNewBullet<cr>", mode = { "n" } },
-      { "O", "O<cmd>AutolistNewBulletBefore<cr>", mode = { "n" } },
-      { "<CR>", "<cmd>AutolistToggleCheckbox<cr><CR>", mode = { "n" } },
-      { "<C-r>", "<cmd>AutolistRecalculate<cr>", mode = { "n" } },
-
-      { "].", "<cmd>AutolistCycleNext<cr>", mode = { "n" }, desc = "Next List Type" },
-      { "[.", "<cmd>AutolistCyclePrev<cr>", mode = { "n" }, desc = "Prev List Type" },
-
-      { ">>", ">><cmd>AutolistRecalculate<cr>", mode = { "n" } },
-      { "<<", "<<<cmd>AutolistRecalculate<cr>", mode = { "n" } },
-      { "dd", "dd<cmd>AutolistRecalculate<cr>", mode = { "n" } },
-      { "d", "d<cmd>AutolistRecalculate<cr>", mode = { "v" } },
-    },
-  },
-  {
-    "antonk52/markdowny.nvim",
-    ft = { "markdown", "txt" },
+    "mfussenegger/nvim-lint",
     opts = {
-      filetypes = { "markdown", "txt" },
+      linters = {
+        ["markdownlint-cli2"] = {
+          prepend_args = { "--config", os.getenv("HOME") .. "/.config/nvim/rules/.markdownlint-cli2.yaml", "--" },
+        },
+      },
     },
   },
   {
     "MeanderingProgrammer/render-markdown.nvim",
     opts = {
-      preset = "lazy",
+      render_modes = { "n", "c", "t" },
+      checkbox = {
+        enabled = true,
+      },
+      heading = {
+        atx = false,
+      },
+      preset = "obsidian",
     },
   },
   {

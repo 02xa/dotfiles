@@ -3,7 +3,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "xml",
+        "fish",
       },
     },
   },
@@ -11,7 +11,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        lemminx = {},
+        fish_lsp = {},
       },
     },
   },
@@ -19,7 +19,7 @@ return {
     "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
-        "lemminx",
+        "fish-lsp",
       },
     },
   },

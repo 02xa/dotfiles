@@ -1,4 +1,5 @@
-local palette = require("catppuccin.palettes").get_palette("macchiato") -- Import your favorite catppuccin colors
+local palette = require("catppuccin.palettes").get_palette("macchiato")
+local transparent_bg = require("catppuccin").options.transparent_background and "NONE" or palette.mantle
 
 return {
   {
@@ -6,6 +7,24 @@ return {
     lazy = false,
     name = "catppuccin",
     opts = {
+      custom_highlights = {
+        -- Blink Menu
+        Pmenu = { bg = palette.base },
+        PmenuSel = { bg = palette.surface1, style = { "bold" } },
+        PmenuBar = { bg = palette.surface1 },
+        BlinkCmpMenuBorder = { bg = palette.base },
+
+        -- Snacks
+        SnacksNotifierInfo = { fg = palette.lavender },
+        SnacksNotifierIconInfo = { fg = palette.lavender },
+        SnacksNotifierTitleInfo = { fg = palette.lavender, style = { "italic" } },
+        SnacksNotifierFooterInfo = { link = "DiagnosticInfo" },
+        SnacksNotifierBorderInfo = { fg = palette.lavender },
+        SnacksPickerPreviewTitle = { fg = palette.crust, bg = palette.lavender },
+        SnacksDashboardHeader = { fg = palette.lavender },
+
+        ["@property"] = { fg = palette.lavender, style = require("catppuccin").options.styles.properties or {} },
+      },
       styles = {
         comments = { "italic" },
       },
@@ -13,102 +32,40 @@ return {
         light = "latte",
         dark = "macchiato",
       },
+      transparent_background = true,
       term_colors = true,
-      custom_highlights = function()
-        return {
-          Visual = { bg = palette.surface2 },
-          FloatermBorder = { fg = palette.base },
-          TelescopeMatching = { fg = palette.blue },
-          TelescopeSelection = { fg = palette.text, bg = palette.surface0, bold = true },
-          TelescopePromptPrefix = { bg = palette.surface0 },
-          TelescopePromptNormal = { bg = palette.surface0 },
-          TelescopeResultsNormal = { bg = palette.mantle },
-          TelescopePreviewNormal = { bg = palette.mantle },
-          TelescopePromptBorder = { bg = palette.surface0, fg = palette.surface0 },
-          TelescopeResultsBorder = { bg = palette.mantle, fg = palette.mantle },
-          TelescopePreviewBorder = { bg = palette.mantle, fg = palette.mantle },
-          TelescopePromptTitle = { bg = palette.red, fg = palette.mantle },
-          TelescopeResultsTitle = { fg = palette.mantle },
-          TelescopePreviewTitle = { bg = palette.green, fg = palette.mantle },
-        }
-      end,
+      auto_integrations = true,
       integrations = {
-        alpha = true,
-        cmp = true,
-        barbecue = {
-          dim_dirname = true, -- directory name is dimmed by default
-          bold_basename = true,
-          dim_context = false,
-          alt_background = false,
-        },
-        colorful_winsep = {
+        snacks = {
           enabled = true,
-          color = "lavender",
+          indent_scope_color = "lavender",
         },
-        dap = true,
-        dap_ui = true,
-        dashboard = true,
-        diffview = true,
-        flash = true,
-        headlines = true,
-        gitsigns = true,
-        grug_far = true,
-        harpoon = false,
-        illuminate = true,
-        indent_blankline = {
-          enabled = true,
-          scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
-          colored_indent_levels = false,
-        },
-        render_markdown = true,
-        mason = true,
-        markdown = true,
-        mini = true,
-        native_lsp = {
-          enabled = true,
-          virtual_text = {
-            errors = { "italic" },
-            hints = { "italic" },
-            warnings = { "italic" },
-            information = { "italic" },
-          },
-          underlines = {
-            errors = { "underline" },
-            hints = { "underline" },
-            warnings = { "underline" },
-            information = { "underline" },
-          },
-          inlay_hints = {
-            background = true,
+        lualine = {
+          macchiato = {
+            normal = {
+              a = { bg = palette.lavender, fg = palette.mantle, gui = "bold" },
+              b = { bg = palette.surface0, fg = palette.lavender },
+              c = { bg = transparent_bg, fg = palette.text },
+            },
+
+            inactive = {
+              a = { bg = transparent_bg, fg = palette.lavender },
+              b = { bg = transparent_bg, fg = palette.surface1, gui = "bold" },
+              c = { bg = transparent_bg, fg = palette.overlay0 },
+            },
           },
         },
-        lsp_trouble = false,
-        navic = { enabled = false, custom_bg = "lualine" },
-        neotest = true,
-        neogit = false,
-        neotree = true,
-        notify = true,
-        noice = true,
-        ufo = true,
-        overseer = false,
-        octo = false,
-        rainbow_delimiters = true,
-        semantic_tokens = true,
-        snacks = true,
-        telescope = {
-          enabled = true,
-        },
-        symbols_outline = false,
-        treesitter = true,
-        treesitter_context = false,
-        which_key = true,
+      },
+      float = {
+        transparent = true, -- enables transparency on floating windows
+        solid = true, -- use nvchad styling for floating windows
       },
     },
   },
   {
     "akinsho/bufferline.nvim",
     opts = {
-      highlights = require("catppuccin.groups.integrations.bufferline").get({
+      highlights = require("catppuccin.special.bufferline").get_theme({
         styles = { "italic", "bold" },
         custom = {
           all = {

@@ -2,29 +2,6 @@ return {
   { import = "lazyvim.plugins.extras.lang.typescript" },
   { import = "plugins.extras.lang.json-extended" },
   {
-    "williamboman/mason.nvim",
-  },
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        vtsls = {
-          handlers = {
-            ["textDocument/publishDiagnostics"] = function(err, result, ctx, config)
-              require("ts-error-translator").translate_diagnostics(err, result, ctx, config)
-              vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx, config)
-            end,
-          },
-          init_options = {
-            preferences = {
-              disableSuggestions = true,
-            },
-          },
-        },
-      },
-    },
-  },
-  {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
@@ -32,34 +9,6 @@ return {
         "jsdoc",
       },
     },
-  },
-  {
-    "dmmulroy/tsc.nvim",
-    opts = {
-      auto_start_watch_mode = false,
-      use_trouble_qflist = true,
-      flags = {
-        watch = false,
-      },
-    },
-    keys = {
-      { "<leader>ct", ft = { "typescript", "typescriptreact" }, "<cmd>TSC<cr>", desc = "Type Check" },
-      { "<leader>xy", ft = { "typescript", "typescriptreact" }, "<cmd>TSCOpen<cr>", desc = "Type Check Quickfix" },
-    },
-    ft = {
-      "typescript",
-      "typescriptreact",
-    },
-    cmd = {
-      "TSC",
-      "TSCOpen",
-      "TSCClose",
-      "TSStop",
-    },
-  },
-  {
-    "dmmulroy/ts-error-translator.nvim",
-    opts = {},
   },
   {
     "nvim-neotest/neotest",

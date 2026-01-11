@@ -4,7 +4,7 @@ local keys = {}
 
 -- stylua: ignore start
 for i = 1, 9 do
-  table.insert(keys, { prefix .. i, "<cmd>Grapple select index=" .. i .. "<CR>", desc = "File " .. i })
+  table.insert(keys, { "<leader>" .. i, "<cmd>Grapple select index=" .. i .. "<CR>", desc = "File " .. i })
 end
 
 table.insert(keys, { prefix .. "a", "<cmd>Grapple tag<CR>", desc = "Add Mark" })
@@ -29,6 +29,7 @@ return {
     keys = keys,
     config = function()
       require("grapple").setup({
+        scope = "git_branch",
         win_opts = {
           footer = "",
         },
@@ -63,13 +64,6 @@ return {
       grapple.key_format = "  %s"
 
       table.insert(opts.config.center, 5, grapple)
-    end,
-  },
-  {
-    "nvim-lualine/lualine.nvim",
-    optional = true,
-    opts = function(_, opts)
-      table.insert(opts.sections.lualine_c, { require("grapple").statusline, cond = require("grapple").exists })
     end,
   },
   {
