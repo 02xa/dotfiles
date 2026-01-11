@@ -1,5 +1,5 @@
 [pyprland]
-plugins = ["scratchpads", "magnify", "wallpapers"]
+plugins = ["scratchpads", "magnify"]
 
 [scratchpads.volume]
 command = "pavucontrol"
@@ -12,18 +12,8 @@ force_monitor = "eDP-1"
 command = "kitty --class scratchpad-large"
 lazy = true
 
-[scratchpads.yazi]
-command = "kitty --class scratchpad-large fish -c yazi"
-unfocus = "hide"
-hysteresis = 0.1
-lazy = true
-
 [scratchpads.gpt]
 command = "kitty --class scratchpad-large tgpt -m"
-lazy = true
-
-[scratchpads.dots]
-command = "kitty --class scratchpad-large yadm enter lazygit"
 lazy = true
 
 [scratchpads.btop]
@@ -60,9 +50,4 @@ animation = "fromRight"
 margin = 20
 lazy = true
 
-[wallpapers]
-path = "~/.config/hypr/theme/walls/"
-interval = 60                                                                                                                                                                                               # change every hour
-command = "swww img --transition-bezier 0.5,1.19,.8,.4 --transition-type wipe --transition-duration 2 --transition-fps 75 \"[file]\" && notify-send 'Wallpaper Changed' -i \"[file]\" --app-name=Wallpaper"
-clear_command = "swww clear"
-extensions = ["jpg", "png", "gif", "jpeg"]
+
