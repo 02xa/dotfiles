@@ -14,7 +14,7 @@ set -xg RUSTUP_HOME $XDG_DATA_HOME/rustup
 set -xg CARGO_HOME $XDG_DATA_HOME/cargo
 set -xg LEIN_HOME $XDG_DATA_HOME/lein
 set -xg NUGET_PACKAGES $XDG_CACHE_HOME/NuGetPackages
-set -xg ANDROID_HOME $XDG_DATA_HOME/android
+set -xg ANDROID_USER_HOME $XDG_DATA_HOME/android
 set -xg NODE_REPL_HISTORY $XDG_DATA_HOME/node_repl_history
 set -xg DOCKER_CONFIG $XDG_CONFIG_HOME/docker
 set -xg SQLITE_HISTORY $XDG_DATA_HOME/sqlite_history
@@ -36,6 +36,7 @@ set -xg NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
 set -xg GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
 set -xg W3M_DIR $XDG_DATA_HOME/w3m
 set -xg DOTNET_CLI_HOME $XDG_DATA_HOME/dotnet
+set -xg PNPM_HOME $XDG_DATA_HOME/pnpm
 
 # Path
 fish_add_path $XDG_BIN_HOME
@@ -56,11 +57,13 @@ fish_add_path $XDG_DATA_HOME/bob/nvim-bin
 fish_add_path $XDG_DATA_HOME/npm/bin
 fish_add_path $XDG_DATA_HOME/nvim/mason/bin
 fish_add_path $HOME/.yarn/bin
+fish_add_path $XDG_DATA_HOME/pnpm
 
 # Editor
 set -xg EDITOR nvim
 set -xg VISUAL $EDITOR
 set -xg SUDO_EDITOR $EDITOR
+set -xg PAGER bat
 
 # GPG/LANG
 set -xg GPG_TTY (tty)
@@ -68,12 +71,15 @@ set -xg GPG_TTY (tty)
 # FZF
 set -xg FZF_DEFAULT_COMMAND fd
 set -xg FZF_DEFAULT_OPTS "--height=90% --layout=reverse --info=inline --border rounded --margin=1 --padding=1 \
---color=bg+:#363a4f,spinner:#f4dbd6,hl:#ed8796 \
---color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
---color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796 \
+--color=bg+:#363A4F,bg:#24273A,spinner:#F4DBD6,hl:#ED8796 \
+--color=fg:#CAD3F5,header:#ED8796,info:#B7BDF8,pointer:#F4DBD6 \
+--color=marker:#B7BDF8,fg+:#CAD3F5,prompt:#B7BDF8,hl+:#ED8796 \
+--color=selected-bg:#494D64 \
+--color=border:#6E738D,label:#CAD3F5 \
 --bind 'ctrl-u:preview-half-page-up'
 --bind 'ctrl-d:preview-half-page-down'
---bind 'ctrl-y:execute-silent(printf {} | cut -f 2- | wl-copy --trim-newline)'"
+--bind 'ctrl-y:execute-silent(printf {} | cut -f 2- | wl-copy --trim-newline)'
+--bind 'alt-j:down+down+down+down+down' --bind 'alt-k:up+up+up+up+up'"
 set -xg fzf_preview_dir_cmd eza --long --header --icons --all --color=always --group-directories-first --hyperlink
 set -xg fzf_fd_opts --hidden --color=always
 set -xg _ZO_FZF_OPTS $FZF_DEFAULT_OPTS '--preview "{$fzf_preview_dir_cmd} {2}"'
@@ -83,3 +89,4 @@ if type -q vivid
     set -xg LS_COLORS (vivid generate catppuccin-macchiato)
 end
 set -xg STARSHIP_LOG error
+set -xg ATAC_KEY_BINDINGS $XDG_CONFIG_HOME/atac/vim_key_bindings.toml
