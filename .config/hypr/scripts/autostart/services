@@ -1,10 +1,10 @@
 #!/bin/bash
 
+# Wallpaper engine
+swww-daemon --format xrgb &
+
 # Automounter for removable media
 udiskie &
-
-# Wallpaper Backend
-swww-daemon --format xrgb &
 
 # Pyprland Daemon
 pypr --debug /tmp/pypr.log &
@@ -18,25 +18,19 @@ swaync &
 # OSD Window
 swayosd-server &
 
-# Notify about devices connecting and disconnecting
-devify &
-
 # Idle daemon to screen lock
 hypridle &
-
-# Clipboard
-wl-clip-persist --clipboard regular &
-wl-paste --watch cliphist store &
 
 # Polkit authentication
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-# Screen sharing and portals
-"$HOME"/.config/hypr/portal &
-# xwaylandvideobridge & # Off when using Vesktop instead of Discord
-
 # Audio
 easyeffects --gapplication-service &
+
+# Screen sharing and portals
+"$HOME"/.config/hypr/scripts/portal &
+
+# xwaylandvideobridge & # Off when using Vesktop instead of Discord
 
 # Hyprshade
 hyprshade on vibrance
