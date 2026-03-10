@@ -16,7 +16,6 @@
 <h3 align="center"> 🖌️ Zen Mods:</h3>
 
 - Container Halo
-- No Gaps
 - Smaller Compact Mode
 - SuperPins
-- HideToolbar
+- No Gaps (Deprecated)
