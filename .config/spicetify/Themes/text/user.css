@@ -9,7 +9,7 @@
 
 /* user settings */
 :root {
-  --font-family: "DM Mono", monospace;
+  --font-family: "JetBrains Mono", monospace;
   /*
     --font-family: 'Anonymous Pro', monospace;
     --font-family: 'Courier Prime', monospace;
@@ -160,32 +160,6 @@ div[class*="minBlockSize_56px-padding_8px"] {
 }
 .main-cardImage-imageWrapper {
   box-shadow: none;
-}
-
-/* font */
-*:not([style*="lyric" i] *, [class*="lyric" i], .main-entityHeader-title) {
-  font-family: var(--font-family) !important;
-  font-size: var(--font-size) !important;
-  font-weight: var(--font-weight) !important;
-  line-height: var(--line-height) !important;
-}
-
-.lyrics-lyrics-container *,
-.main-nowPlayingView-lyricsContent * {
-  font-family: var(--font-family);
-  font-size: var(--font-size-lyrics);
-  font-weight: var(--font-weight);
-  line-height: var(--line-height);
-}
-
-.main-entityHeader-title h1 {
-  font-family: var(--font-family) !important;
-  font-size: calc(
-    var(--font-size) * var(--font-size-multiplier-header)
-  ) !important;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
 }
 
 /* images */
