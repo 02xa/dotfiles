@@ -46,9 +46,38 @@
   --display-spicetify-banner-ascii: block; /* none | block */
   --display-music-banner-ascii: none; /* none | block */
 
-  --border-radius: 1px;
+  --border-radius: 0px;
   --border-width: 1px;
   --border-style: solid; /* dotted | dashed | solid | double | groove | ridge | inset | outset */
+  --border-transition: 0.2s ease; /* 'none' to disable  */
+
+  --global-nav-margin-top: 50px; /* set to '0px' if you disabled window controls */
+}
+
+/* font */
+*:not([style*="lyric" i] *, [class*="lyric" i], .main-entityHeader-title) {
+  font-family: var(--font-family) !important;
+  font-size: var(--font-size) !important;
+  font-weight: var(--font-weight) !important;
+  line-height: var(--line-height) !important;
+}
+.lyrics-lyrics-container *,
+.main-nowPlayingView-lyricsContent * {
+  font-family: var(--font-family);
+  font-size: var(--font-size-lyrics);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+}
+.main-entityHeader-title h1,
+.main-entityHeader-title span {
+  font-family: var(--font-family-header) !important;
+  font-size: calc(
+    var(--font-size) * var(--font-size-multiplier-header)
+  ) !important;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 
 /* images */
@@ -75,7 +104,7 @@
   display: var(--display-tracklist-image);
 }
 
-/* Fix */
+/* fix */
 .Root__globalNav {
   padding: 8px 16px !important;
   height: unset;
@@ -160,91 +189,6 @@ div[class*="minBlockSize_56px-padding_8px"] {
 }
 .main-cardImage-imageWrapper {
   box-shadow: none;
-}
-
-/* images */
-.main-card-imageContainer img,
-.view-homeShortcutsGrid-imageContainer img {
-  display: var(--display-card-image) !important;
-}
-
-.main-coverSlotCollapsed-container {
-  display: var(--display-coverart-image);
-}
-
-.main-entityHeader-imageContainer,
-.under-main-view,
-.main-entityHeader-creatorWrapper .main-avatar-avatar,
-.main-entityHeader-imageContainer,
-.playlist-playlist-playlistImageContainer,
-.profile-userOverview-imageContainer {
-  display: var(--display-header-image);
-}
-
-.x-entityImage-imageContainer img,
-.main-avatar-image {
-  display: var(--display-library-image);
-}
-
-.main-trackList-rowImage {
-  display: var(--display-tracklist-image);
-}
-
-/* fix */
-:root {
-  --content-max-width: 100% !important;
-}
-
-.Root__top-container {
-  --panel-gap: 16px !important;
-}
-
-.Root__top-bar {
-  border: var(--border-width) solid transparent;
-}
-
-.Root__main-view,
-.Root__nav-bar,
-.Root__now-playing-bar {
-  overflow: visible;
-}
-
-.main-view-container {
-  overflow: hidden;
-}
-
-.main-entityHeader-container.main-entityHeader-withBackgroundImage,
-.main-entityHeader-container.main-entityHeader-nonWrapped {
-  height: 250px;
-  min-height: unset;
-}
-
-.main-entityHeader-imageContainerNew {
-  height: 128px;
-  width: 128px;
-}
-
-.main-topBar-background,
-.main-topBar-overlay,
-.main-home-homeHeader,
-.main-home-filterChipsSection,
-.main-home-filterChipsSection::after {
-  background-color: var(--spice-main) !important;
-  background-image: none;
-}
-
-.LayoutResizer__resize-bar {
-  cursor: w-resize;
-}
-
-.LayoutResizer__inline-end:after,
-.LayoutResizer__inline-start:after {
-  background-color: var(--spice-border-inactive);
-}
-
-.LayoutResizer__resize-bar--resizing.LayoutResizer__inline-start:after,
-.LayoutResizer__resize-bar--resizing.LayoutResizer__inline-end:after {
-  background-color: var(--spice-border-active);
 }
 
 /* fullscreen */
