@@ -38,25 +38,128 @@
 
   --font-size-multiplier-header: 4;
 
-  --display-card-image: block;
-  /* none | block */
-  --display-coverart-image: none;
-  /* none | block */
-  /* --display-header-image: none; */
-  /* none | block */
-  --display-library-image: block;
-  /* none | block */
-  /*--display-tracklist-image: none;*/
-  /* none | block */
-  --display-spicetify-banner-ascii: block;
-  /* none | block */
-  --display-music-banner-ascii: none;
-  /* none | block */
+  --display-card-image: block; /* none | block */
+  --display-coverart-image: none; /* none | block */
+  /*--display-header-image: none; /* none | block */
+  --display-library-image: block; /* none | block */
+  /*--display-tracklist-image: none;  /* none | block */
+  --display-spicetify-banner-ascii: block; /* none | block */
+  --display-music-banner-ascii: none; /* none | block */
 
-  --border-radius: 5px;
+  --border-radius: 1px;
   --border-width: 1px;
-  --border-style: solid;
-  /* dotted | dashed | solid | double | groove | ridge | inset | outset */
+  --border-style: solid; /* dotted | dashed | solid | double | groove | ridge | inset | outset */
+}
+
+/* images */
+.main-card-imageContainer img,
+.view-homeShortcutsGrid-imageContainer img {
+  display: var(--display-card-image) !important;
+}
+.main-coverSlotCollapsed-container {
+  display: var(--display-coverart-image);
+}
+.main-entityHeader-imageContainer,
+.under-main-view,
+.main-entityHeader-creatorWrapper .main-avatar-avatar,
+.main-entityHeader-imageContainer,
+.playlist-playlist-playlistImageContainer,
+.profile-userOverview-imageContainer {
+  display: var(--display-header-image);
+}
+.x-entityImage-imageContainer img,
+.main-avatar-image {
+  display: var(--display-sidebar-image);
+}
+.main-trackList-rowImage {
+  display: var(--display-tracklist-image);
+}
+
+/* Fix */
+.Root__globalNav {
+  padding: 8px 16px !important;
+  height: unset;
+}
+.spotify__container--is-desktop.spotify__os--is-windows .Root__globalNav,
+.spotify__container--is-desktop.spotify__os--is-macos .Root__globalNav {
+  margin: 0;
+  margin-top: var(--global-nav-margin-top);
+}
+.spotify__container--is-desktop.spotify__os--is-linux .Root__globalNav {
+  margin: 8px 0 0;
+}
+.Root__top-container {
+  --panel-gap: 16px !important;
+}
+.Root__top-bar {
+  border: var(--border-width) solid transparent;
+}
+.Root__nav-bar,
+.main-nowPlayingBar-container {
+  overflow: visible;
+}
+.main-view-container {
+  overflow: hidden;
+}
+section:has(> .main-entityHeader-container),
+div:has(> .main-entityHeader-container) {
+  margin-top: 0;
+}
+.main-entityHeader-container {
+  height: unset !important;
+  min-height: unset !important;
+}
+.main-entityHeader-imageContainerNew {
+  height: 128px;
+  width: 128px;
+}
+.main-topBar-overlay,
+.main-entityHeader-container > div,
+.main-entityHeader-container + div[style*="background-color"],
+.main-entityHeader-container + div > div[style*="background-color"],
+.main-home-homeHeader,
+.main-nowPlayingView-contextItemInfo::before {
+  background-color: transparent !important;
+  background-image: none !important;
+  background: transparent !important;
+  transition: unset !important;
+}
+.main-topBar-background,
+.main-home-filterChipsSection,
+.main-home-filterChipsSection::after,
+.main-trackList-trackListHeader,
+.main-trackList-trackListHeaderStuck.main-trackList-trackListHeader,
+.main-entityHeader-container + div,
+.main-entityHeader-container + div > div {
+  background-color: var(--spice-main) !important;
+  background: var(--spice-main);
+  transition: unset !important;
+}
+.LayoutResizer__resize-bar {
+  cursor: w-resize;
+}
+.LayoutResizer__inline-end:after,
+.LayoutResizer__inline-start:after {
+  background-color: var(--spice-border-inactive);
+}
+.LayoutResizer__resize-bar--resizing.LayoutResizer__inline-start:after,
+.LayoutResizer__resize-bar--resizing.LayoutResizer__inline-end:after {
+  background-color: var(--spice-border-active);
+}
+div[class*="minBlockSize_56px-padding_8px"] {
+  padding: 4px !important;
+}
+.main-trackList-number {
+  top: 0;
+}
+.main-cardImage-imageWrapper,
+.main-image-image,
+.main-avatar-image,
+.x-entityImage-xsmall {
+  border-radius: var(--border-radius) !important;
+}
+.main-cardImage-imageWrapper {
+  box-shadow: none;
 }
 
 /* font */
