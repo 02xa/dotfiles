@@ -553,16 +553,6 @@ div[class*="minBlockSize_56px-padding_8px"] {
   border-radius: var(--border-radius);
 }
 
-/* headers */
-.main-entityHeader-container.main-entityHeader-withBackgroundImage {
-  background-image: radial-gradient(
-    circle,
-    rgba(var(--spice-rgb-main), 0.7) 0%,
-    rgba(var(--spice-rgb-main), 0.9) 50%,
-    rgba(var(--spice-rgb-main), 1) 100%
-  );
-}
-
 /* compact tracklists */
 .main-trackList-trackListRow {
   height: 32px;
