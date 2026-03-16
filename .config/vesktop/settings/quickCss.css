@@ -1,0 +1,42 @@
+/* Remove top gap visual refresh. */
+
+@import url("https://raw.githubusercontent.com/G0d0fninjas/visual-refresh-compact-title-bar/refs/heads/experimental/desktop.css");
+
+/*========= Chat related. =========*/
+
+/* Remove hover reactions. */
+.buttons__5126c,
+container__040f0,
+isHeader__040f0 {
+  display: none;
+}
+
+/* Hide apps button.*/
+.e6e74fd4d1221f53-buttonContainer {
+  display: none;
+}
+
+/* Hide nitro button */
+
+.c0c49a3e5c8626ac-container {
+  display: none;
+}
+
+/* Hide reactions recommendations on right click. */
+
+.wrapper_f563df {
+  display: none;
+}
+
+/* Remove 'Favorite' button on Gifs. */
+
+.gifFavoriteButton_b7e1cb {
+  display: none;
+}
+
+/*========= DMs page. =========*/
+
+li div a[href="/shop"], /* Hide 'Shop' Tab */
+li div a[href="/store"] /* Hide 'Nitro' Tab */ {
+  display: none;
+}
