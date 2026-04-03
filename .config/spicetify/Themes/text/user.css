@@ -28,14 +28,11 @@
     --font-family: 'Ubuntu Mono', monospace;
     --font-family: 'VT323', monospace;
     */
+
   --font-size: 14px;
-  --font-weight: 400;
-  /* 200 : 900 */
+  --font-weight: 400; /* 200 : 900 */
   --line-height: 1.2;
-
-  --font-size-lyrics: 14px;
-  /* 1.5em (default) */
-
+  --font-size-lyrics: 14px; /* 1.5em (default) */
   --font-size-multiplier-header: 4;
 
   --display-card-image: block; /* none | block */
@@ -810,24 +807,17 @@ div[class*="minBlockSize_56px-padding_8px"] {
   fill: var(--spice-accent-active);
 }
 
-/* Snippets */
-
-/* "Queue Top Side Panel" */
-
-.main-nowPlayingView-section:not(.main-nowPlayingView-queue) {
-  order: 99;
-}
-
+/*---------------------------------------------------*/
+/* Custom Snippets (Not part from 'text' theme.) */
+/*---------------------------------------------------*/
 /*Hides the Full Screen button.*/
-
 button:has(
     path[d="M6.53 9.47a.75.75 0 0 1 0 1.06l-2.72 2.72h1.018a.75.75 0 0 1 0 1.5H1.25v-3.579a.75.75 0 0 1 1.5 0v1.018l2.72-2.72a.75.75 0 0 1 1.06 0zm2.94-2.94a.75.75 0 0 1 0-1.06l2.72-2.72h-1.018a.75.75 0 1 1 0-1.5h3.578v3.579a.75.75 0 0 1-1.5 0V3.81l-2.72 2.72a.75.75 0 0 1-1.06 0z"]
   ) {
   display: none;
 }
 
-/* Smooth progress bar */
-
+/* Smooth progress bar. */
 @property --progress-bar-transform {
   inherits: true;
   initial-value: 0%;
@@ -838,4 +828,19 @@ button:has(
 }
 .progress-bar--isDragging {
   transition-duration: 150ms !important;
+}
+
+/* Remove top spacing - (where should be the Window action buttons.) */
+.Root__top-container:has([class*="yourLibraryX"]) {
+  padding-top: 8px;
+}
+
+/* Remove the Artists and Credits sections from the Sidebar. */
+.nw2W4ZMdICuBo08Tzxg9 {
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.main-nowPlayingView-section:not(.main-nowPlayingView-queue) {
+  display: none !important;
 }
