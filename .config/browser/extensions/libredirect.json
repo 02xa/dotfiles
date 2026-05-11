@@ -4,8 +4,7 @@
     "redirectType": "main_frame",
     "frontend": "invidious",
     "embedFrontend": "invidious",
-    "unsupportedUrls": "bypass",
-    "redirectOnlyInIncognito": false
+    "unsupportedUrls": "bypass"
   },
   "invidious": [
     "https://inv.vern.cc"
@@ -32,8 +31,7 @@
     "enabled": true,
     "frontend": "hyperpipe",
     "unsupportedUrls": "bypass",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "hyperpipe": [
     "https://hyperpipe.surge.sh"
@@ -43,19 +41,17 @@
     "enabled": false,
     "unsupportedUrls": "bypass",
     "frontend": "skyview",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "skyview": [
     "https://skyview.social"
   ],
   "reddit": {
-    "enabled": true,
+    "enabled": false,
     "frontend": "redlib",
     "unsupportedUrls": "bypass",
     "instance": "public",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "libreddit": [
     "https://libreddit.spike.codes"
@@ -71,19 +67,17 @@
     "redirectType": "main_frame",
     "unsupportedUrls": "bypass",
     "frontend": "priviblur",
-    "instance": "public",
-    "redirectOnlyInIncognito": false
+    "instance": "public"
   },
   "priviblur": [
     "https://pb.bloat.cat"
   ],
   "twitch": {
-    "enabled": false,
+    "enabled": true,
     "redirectType": "main_frame",
     "unsupportedUrls": "bypass",
     "frontend": "safetwitch",
-    "instance": "public",
-    "redirectOnlyInIncognito": false
+    "instance": "public"
   },
   "safetwitch": [
     "https://safetwitch.drgns.space"
@@ -96,30 +90,26 @@
     "unsupportedUrls": "bypass",
     "frontend": "proxiTok",
     "instance": "public",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "proxiTok": [
-    "https://proxitok.pussthecat.org"
+    "https://proxitok.pabloferreiro.es"
   ],
   "instagram": {
     "enabled": true,
     "frontend": "proxigram",
     "unsupportedUrls": "bypass",
     "instance": "public",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "proxigram": [
     "https://proxigram.privacyfrontends.repl.co"
   ],
   "imdb": {
-    "enabled": true,
+    "enabled": false,
     "unsupportedUrls": "bypass",
     "frontend": "libremdb",
-    "instance": "public",
-    "redirectOnlyInIncognito": false,
-    "redirectType": "main_frame"
+    "instance": "public"
   },
   "libremdb": [
     "https://libremdb.iket.me"
@@ -127,8 +117,7 @@
   "bilibili": {
     "enabled": false,
     "unsupportedUrls": "bypass",
-    "frontend": "mikuInvidious",
-    "redirectOnlyInIncognito": false
+    "frontend": "mikuInvidious"
   },
   "mikuInvidious": [
     "https://mikuinv.resrv.org"
@@ -137,8 +126,7 @@
     "enabled": true,
     "unsupportedUrls": "bypass",
     "frontend": "pixivFe",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "pixivFe": [
     "https://pixivfe.exozy.me"
@@ -148,8 +136,7 @@
     "unsupportedUrls": "bypass",
     "instance": "public",
     "frontend": "breezeWiki",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "breezeWiki": [
     "https://breezewiki.com"
@@ -159,8 +146,7 @@
     "redirectType": "main_frame",
     "unsupportedUrls": "bypass",
     "frontend": "rimgo",
-    "instance": "public",
-    "redirectOnlyInIncognito": false
+    "instance": "public"
   },
   "rimgo": [
     "https://rimgo.vern.cc"
@@ -169,8 +155,7 @@
     "enabled": false,
     "unsupportedUrls": "bypass",
     "redirectType": "main_frame",
-    "frontend": "binternet",
-    "redirectOnlyInIncognito": false
+    "frontend": "binternet"
   },
   "binternet": [
     "https://binternet.ahwx.org"
@@ -179,18 +164,15 @@
     "enabled": true,
     "redirectType": "main_frame",
     "frontend": "tuboSoundcloud",
-    "unsupportedUrls": "bypass",
-    "redirectOnlyInIncognito": false
+    "unsupportedUrls": "bypass"
   },
   "tuboSoundcloud": [
     "https://tubo.migalmoreno.com"
   ],
   "bandcamp": {
-    "enabled": true,
+    "enabled": false,
     "unsupportedUrls": "bypass",
-    "frontend": "tent",
-    "redirectOnlyInIncognito": false,
-    "redirectType": "main_frame"
+    "frontend": "tent"
   },
   "tent": [
     "https://tent.sny.sh"
@@ -198,8 +180,7 @@
   "tekstowo": {
     "enabled": false,
     "unsupportedUrls": "bypass",
-    "frontend": "tekstoLibre",
-    "redirectOnlyInIncognito": false
+    "frontend": "tekstoLibre"
   },
   "tekstoLibre": [
     "https://davilarek.github.io/TekstoLibre"
@@ -207,10 +188,9 @@
   "genius": {
     "enabled": true,
     "unsupportedUrls": "bypass",
-    "frontend": "dumb",
+    "frontend": "intellectual",
     "instance": "public",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "dumb": [
     "https://dm.vern.cc"
@@ -222,8 +202,7 @@
     "frontend": "libMedium",
     "enabled": true,
     "unsupportedUrls": "bypass",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "scribe": [
     "https://scribe.rip"
@@ -232,12 +211,11 @@
     "https://md.vern.cc"
   ],
   "quora": {
-    "enabled": false,
+    "enabled": true,
     "unsupportedUrls": "bypass",
     "frontend": "quetre",
     "instance": "public",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "quetre": [
     "https://quetre.iket.me"
@@ -246,8 +224,7 @@
     "enabled": false,
     "unsupportedUrls": "bypass",
     "frontend": "gothub",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "gothub": [
     "https://gh.odyssey346.dev"
@@ -255,8 +232,7 @@
   "gitlab": {
     "enabled": false,
     "unsupportedUrls": "bypass",
-    "frontend": "laboratory",
-    "redirectOnlyInIncognito": false
+    "frontend": "laboratory"
   },
   "laboratory": [
     "https://lab.vern.cc"
@@ -266,8 +242,7 @@
     "unsupportedUrls": "bypass",
     "frontend": "anonymousOverflow",
     "instance": "public",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "anonymousOverflow": [
     "https://code.whatever.social"
@@ -276,8 +251,7 @@
     "enabled": false,
     "unsupportedUrls": "bypass",
     "frontend": "neuters",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "neuters": [
     "https://neuters.de"
@@ -285,8 +259,7 @@
   "snopes": {
     "enabled": false,
     "unsupportedUrls": "bypass",
-    "frontend": "suds",
-    "redirectOnlyInIncognito": false
+    "frontend": "suds"
   },
   "suds": [
     "https://sd.vern.cc"
@@ -295,8 +268,7 @@
     "enabled": false,
     "unsupportedUrls": "bypass",
     "frontend": "ruralDictionary",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "ruralDictionary": [
     "https://rd.vern.cc"
@@ -306,8 +278,7 @@
     "unsupportedUrls": "bypass",
     "frontend": "biblioReads",
     "instance": "public",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "biblioReads": [
     "https://biblioreads.ml"
@@ -315,8 +286,7 @@
   "wolframAlpha": {
     "enabled": false,
     "unsupportedUrls": "bypass",
-    "frontend": "wolfreeAlpha",
-    "redirectOnlyInIncognito": false
+    "frontend": "wolfreeAlpha"
   },
   "wolfreeAlpha": [
     "https://gqq.gitlab.io",
@@ -325,8 +295,7 @@
   "instructables": {
     "enabled": false,
     "unsupportedUrls": "bypass",
-    "frontend": "indestructables",
-    "redirectOnlyInIncognito": false
+    "frontend": "indestructables"
   },
   "indestructables": [
     "https://indestructables.private.coffee"
@@ -338,8 +307,7 @@
     "enabled": false,
     "unsupportedUrls": "bypass",
     "frontend": "wikiless",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "wikiless": [
     "https://wikiless.org"
@@ -348,8 +316,7 @@
     "enabled": false,
     "unsupportedUrls": "bypass",
     "frontend": "waybackClassic",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "waybackClassic": [
     "https://wayback-classic.net"
@@ -359,9 +326,7 @@
     "frontend": "searxng",
     "unsupportedUrls": "bypass",
     "instance": "public",
-    "redirectType": "main_frame",
-    "redirectGoogle": false,
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "searxng": [
     "https://search.bus-hit.me"
@@ -377,8 +342,7 @@
     "frontend": "libreTranslate",
     "unsupportedUrls": "bypass",
     "instance": "public",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "simplyTranslate": [
     "https://simplytranslate.org"
@@ -391,8 +355,7 @@
     "redirectType": "main_frame",
     "enabled": true,
     "frontend": "osm",
-    "unsupportedUrls": "bypass",
-    "redirectOnlyInIncognito": false
+    "unsupportedUrls": "bypass"
   },
   "osm": [
     "https://www.openstreetmap.org"
@@ -401,24 +364,21 @@
     "enabled": true,
     "unsupportedUrls": "bypass",
     "frontend": "jitsi",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "jitsi": [],
   "sendFiles": {
     "enabled": true,
     "unsupportedUrls": "bypass",
     "frontend": "send",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "send": [],
   "textStorage": {
     "enabled": true,
     "unsupportedUrls": "bypass",
     "frontend": "privateBin",
-    "redirectType": "main_frame",
-    "redirectOnlyInIncognito": false
+    "redirectType": "main_frame"
   },
   "privateBin": [],
   "exceptions": {
@@ -448,192 +408,5 @@
   ],
   "fetchInstances": "github",
   "redirectOnlyInIncognito": false,
-  "materialious": [
-    "https://app.materialio.us"
-  ],
-  "lightTube": [
-    "https://tube.kuylar.dev"
-  ],
-  "ytify": [
-    "https://ytify.pp.ua"
-  ],
-  "twitter": {
-    "enabled": false,
-    "redirectType": "main_frame",
-    "unsupportedUrls": "bypass",
-    "frontend": "nitter",
-    "instance": "public",
-    "redirectOnlyInIncognito": false
-  },
-  "nitter": [
-    "https://nitter.privacydev.net"
-  ],
-  "chatGpt": {
-    "enabled": false,
-    "unsupportedUrls": "bypass",
-    "frontend": "duckDuckGoAiChat",
-    "redirectOnlyInIncognito": false
-  },
-  "eddrit": [
-    "https://eddrit.com"
-  ],
-  "offtiktok": [
-    "https://www.offtiktok.com"
-  ],
-  "liteXiv": [
-    "https://litexiv.465321.best",
-    "https://litexiv.bloat.cat"
-  ],
-  "vixipy": [
-    "https://vx.maid.zone"
-  ],
-  "pixivViewer": [
-    "https://pixiv.pictures"
-  ],
-  "painterest": [
-    "https://pt.bloat.cat"
-  ],
-  "soundcloak": [
-    "https://soundcloak.fly.dev"
-  ],
-  "small": [
-    "https://small.bloat.cat"
-  ],
-  "freedium": [
-    "https://freedium.cfd"
-  ],
-  "ifunny": {
-    "enabled": false,
-    "unsupportedUrls": "bypass",
-    "frontend": "unfunny",
-    "redirectOnlyInIncognito": false
-  },
-  "unfunny": [
-    "https://uf.vern.cc"
-  ],
-  "tenor": {
-    "enabled": false,
-    "unsupportedUrls": "bypass",
-    "frontend": "soprano",
-    "redirectOnlyInIncognito": false
-  },
-  "soprano": [
-    "https://sp.vern.cc"
-  ],
-  "knowyourmeme": {
-    "enabled": false,
-    "unsupportedUrls": "bypass",
-    "frontend": "meme",
-    "redirectOnlyInIncognito": false
-  },
-  "meme": [
-    "https://mm.vern.cc"
-  ],
-  "structables": [
-    "https://structables.private.coffee"
-  ],
-  "wikimore": [
-    "https://wikimore.private.coffee"
-  ],
-  "pastebin": {
-    "enabled": false,
-    "unsupportedUrls": "bypass",
-    "frontend": "pasted",
-    "instance": "public",
-    "redirectOnlyInIncognito": false
-  },
-  "pasted": [
-    "https://pasted.drakeerv.com"
-  ],
-  "websurfx": [
-    "https://alamin655-spacex.hf.space"
-  ],
-  "translite": [
-    "https://tl.bloat.cat"
-  ],
-  "pasty": [
-    "https://pasty.lus.pm"
-  ],
-  "office": {
-    "enabled": false,
-    "unsupportedUrls": "bypass",
-    "frontend": "cryptPad",
-    "redirectOnlyInIncognito": false
-  },
-  "cryptPad": [
-    "https://cryptpad.org"
-  ],
-  "ultimateGuitar": {
-    "enabled": false,
-    "unsupportedUrls": "bypass",
-    "frontend": "freetar",
-    "redirectOnlyInIncognito": false
-  },
-  "freetar": [
-    "https://freetar.de"
-  ],
-  "baiduTieba": {
-    "enabled": false,
-    "unsupportedUrls": "bypass",
-    "frontend": "ratAintTieba",
-    "redirectOnlyInIncognito": false
-  },
-  "ratAintTieba": [
-    "https://rat.fis.land"
-  ],
-  "threads": {
-    "enabled": false,
-    "unsupportedUrls": "bypass",
-    "frontend": "shoelace",
-    "redirectOnlyInIncognito": false
-  },
-  "shoelace": [
-    "https://shoelace.mint.lgbt"
-  ],
-  "deviantArt": {
-    "enabled": false,
-    "unsupportedUrls": "bypass",
-    "frontend": "skunkyArt",
-    "redirectOnlyInIncognito": false
-  },
-  "skunkyArt": [
-    "https://skunky.bloat.cat"
-  ],
-  "geeksForGeeks": {
-    "enabled": false,
-    "unsupportedUrls": "bypass",
-    "frontend": "nerdsForNerds",
-    "redirectOnlyInIncognito": false
-  },
-  "nerdsForNerds": [
-    "https://nn.vern.cc"
-  ],
-  "ducksForDucks": [
-    "https://ducksforducks.private.coffee"
-  ],
-  "coub": {
-    "enabled": false,
-    "unsupportedUrls": "bypass",
-    "frontend": "koub",
-    "redirectOnlyInIncognito": false
-  },
-  "koub": [
-    "https://koub.clovius.club"
-  ],
-  "chefkoch": {
-    "enabled": false,
-    "unsupportedUrls": "bypass",
-    "frontend": "gocook",
-    "redirectOnlyInIncognito": false
-  },
-  "gocook": [
-    "https://cook.adminforge.de"
-  ],
-  "troddit": [
-    "https://www.troddit.com"
-  ],
-  "ultimateTab": [
-    "https://ultimate-tab.com"
-  ],
-  "version": "3.2.0"
+  "version": "2.8.2"
 }
