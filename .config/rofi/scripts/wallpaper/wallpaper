@@ -22,7 +22,7 @@ choice=$(
 
 wallpaper="$wallpapers_dir/$choice"
 
-swww img "$wallpaper" \
+awww img "$wallpaper" \
   --transition-bezier 0.5,1.19,.8,.4 \
   --transition-type wipe \
   --transition-duration 2 \
