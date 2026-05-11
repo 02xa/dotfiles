@@ -1,8 +1,7 @@
 <div align="center">
 <h4>My .files</h4>
 
-This repository includes my .configs, which I use in my daily routine on a machine with Hyprland.<br>
-Feel free to dig and find something of your interest!<br>
+This repository includes my .configs, which I use in my daily routine on a machine with Hyprland.
 
 </div>
 
