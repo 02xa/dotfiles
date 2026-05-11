@@ -6,7 +6,7 @@
   "layer": "overlay",
   "control-center-layer": "top",
   "layer-shell": true,
-  "cssPriority": "user",
+  "cssPriority": "highest",
   "layer-shell-cover-screen": true,
   "control-center-margin-top": 0,
   "control-center-margin-bottom": 0,
@@ -27,7 +27,7 @@
   "transition-time": 200,
   "hide-on-clear": false,
   "hide-on-action": true,
-  "widgets": ["title", "notifications"],
+  "widgets": ["title", "notifications", "mpris"],
   "widget-config": {
     "title": {
       "text": "Notifications",
@@ -42,10 +42,9 @@
       "text": "Notification Center"
     },
     "mpris": {
-      "blacklist": [],
-      "autohide": true,
-      "show-album-art": "always",
-      "loop-carousel": false
+      "image-size": 96,
+      "image-radius": 12,
+      "blur": false
     }
   }
 }
