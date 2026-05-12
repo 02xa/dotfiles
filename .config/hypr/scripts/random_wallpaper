@@ -4,7 +4,7 @@ random=$(fd --base-directory "$HOME/.config/hypr/theme/walls/" --type f . | shuf
 
 wallpaper="$HOME/.config/hypr/theme/walls/$random"
 
-swww img "$wallpaper" \
+awww img "$wallpaper" \
   --transition-bezier 0.5,1.19,.8,.4 \
   --transition-type wipe \
   --transition-duration 2 \
