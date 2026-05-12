@@ -71,6 +71,10 @@ return {
         time_format = "%H:%M",
       },
 
+      note = {
+        template = os.getenv("HOME") .. "/documents/obsidian/personal-brain/vault/00 - Data/Plantillas/Nota.md",
+      },
+
       -- Optional, customize how note file names are generated given the ID, target directory, and title.
       ---@param spec { id: string, dir: obsidian.Path, title: string|? }
       ---@return string|obsidian.Path The full path to the new note.
@@ -84,29 +88,45 @@ return {
         return title
       end,
 
-      note_frontmatter_func = function(note)
-        if note.id then
-          note:add_alias(note.id)
-        end
-
-        local out = { aliases = note.aliases }
-
-        if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
-          for k, v in pairs(note.metadata) do
-            out[k] = v
+      frontmatter = {
+        func = function(note)
+          if note.id then
+            note:add_alias(note.id)
           end
-        end
 
-        return out
-      end,
+          local out = { aliases = note.aliases }
 
-      follow_url_func = function(url)
-        vim.fn.jobstart({ "xdg-open", url })
-      end,
+          if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
+            for k, v in pairs(note.metadata) do
+              out[k] = v
+            end
+          end
+
+          return out
+        end,
+      },
+
+      callback = {
+        enter_note = function(note)
+          vim.ui.open = (function(overridden)
+            return function(uri, opt)
+              if vim.endswith(uri, ".png") then
+                vim.cmd("edit " .. uri) -- early return to just open in neovim
+                return
+              elseif vim.endswith(uri, ".pdf") then
+                opt = { cmd = { "zathura" } } -- override open app
+              end
+              return overridden(uri, opt)
+            end
+          end)(vim.ui.open)
+        end,
+      },
 
       attachments = {
-        img_folder = "00 - Data/Documentos",
+        folder = "00 - Data/Documentos",
       },
+
+      legacy_commands = false,
 
       image = {
         resolve = function(path, src)
@@ -168,13 +188,6 @@ return {
         { prefix, group = "obsidian", icon = " ", mode = { "n", "v" } },
       },
     },
-  },
-  {
-    "nvim-lualine/lualine.nvim",
-    optional = true,
-    opts = function(_, opts)
-      table.insert(opts.sections.lualine_x, 1, "g:obsidian")
-    end,
   },
   {
     "neovim/nvim-lspconfig",

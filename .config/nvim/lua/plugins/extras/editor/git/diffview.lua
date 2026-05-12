@@ -58,13 +58,28 @@ return {
     end,
   },
   {
+    "folke/snacks.nvim",
+    optional = true,
+    keys = {
+      { prefix_diffs, false },
+      { "<leader>gD", false },
+      { "<leader>gf", false },
+    },
+  },
+  {
     "NeogitOrg/neogit",
     optional = true,
     opts = {
       integrations = {
         diffview = true,
       },
+      diff_viewer = "diffview"
     },
+  },
+  {
+    "esmuellert/codediff.nvim",
+    optional = true,
+    enabled = false,
   },
   {
     "folke/which-key.nvim",
