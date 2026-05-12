@@ -29,8 +29,7 @@
     }
 
     .search-wrapper .logo-and-wordmark .logo {
-      background:
-        url("zen-logo-macchiato.svg"),
+      background: url("zen-logo-macchiato.svg"),
         url("https://raw.githubusercontent.com/IAmJafeth/zen-browser/main/themes/Macchiato/Lavender/zen-logo-macchiato.svg")
           no-repeat center !important;
       display: inline-block !important;
