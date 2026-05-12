@@ -17,6 +17,7 @@ user_pref("signon.autofillForms", false);
 user_pref("browser.urlbar.suggest.searches", false);
 user_pref("browser.tabs.fadeOutUnloadedTabs", true);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+
 // Disable AI stuff
 user_pref("browser.ml.enable", false);
 user_pref("browser.ml.chat.enabled", false);
@@ -29,7 +30,6 @@ user_pref("browser.tabs.groups.smart.userEnabled", false);
 user_pref("browser.urlbar.trimURLs", true);
 user_pref("browser.tabs.hoverPreview.enabled", true);
 user_pref("toolkit.tabbox.switchByScrolling", false);
-user_pref("zen.urlbar.replace-newtab", true);
 user_pref("zen.tabs.vertical.right-side", true);
 user_pref("zen.workspaces.open-new-tab-if-last-unpinned-tab-is-closed", false);
 user_pref("zen.theme.gradient", true);
