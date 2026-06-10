@@ -1,0 +1,38 @@
+hl.config({
+	general = {
+		allow_tearing = false,
+	},
+
+	misc = {
+		always_follow_on_dnd = true,
+		disable_hyprland_logo = true,
+		vrr = 0,
+		animate_manual_resizes = true,
+		animate_mouse_windowdragging = false,
+		enable_swallow = true,
+		font_family = "JetBrainsMono Nerd Font",
+	},
+
+	debug = {
+		vfr = true,
+	},
+
+	binds = {
+		movefocus_cycles_fullscreen = false,
+	},
+
+	xwayland = {
+		force_zero_scaling = true,
+	},
+
+	dwindle = {
+		force_split = 0,
+		preserve_split = true,
+	},
+})
+
+hl.gesture({
+	fingers = 4,
+	direction = "horizontal",
+	action = "workspace",
+})
